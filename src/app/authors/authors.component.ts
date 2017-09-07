@@ -9,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class AuthorsComponent implements OnInit {
   title = "Authors";
   authors;
+  total;
 
   constructor(authorService: AuthorsService) {
     this.authors = authorService.getAuthors();
+    this.total = authorService.getAuthors().length;
    }
   
   ngOnInit() {
