@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AuthorsComponent } from './authors/authors.component';
+import { FavoriteIconComponent } from './favorite-icon/favorite-icon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AuthorsComponent
+    AuthorsComponent,
+    FavoriteIconComponent
   ],
   imports: [
     BrowserModule
