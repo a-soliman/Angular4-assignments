@@ -1,0 +1,12 @@
+<h2 class="page-header">4. Like</h2>
+
+<div>
+  <span class="glyphicon"
+  [class.glyphicon-heart]="isLiked"
+  [class.glyphicon-heart-empty]="!isLiked"
+  (click)="changeLike()"></span>
+
+  <span>
+    {{ likesCount }}
+  </span>
+</div>

@@ -1,6 +1,12 @@
 <div class="container">
     <h1>{{title}}</h1>
 
+    <app-like
+        [likesCount]="tweet.likesCount"
+        [isLiked]="tweet.isLiked"></app-like>
+    
+    <hr>
+
     <app-title-case></app-title-case>
 
     <hr>
