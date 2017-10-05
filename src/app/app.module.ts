@@ -10,6 +10,7 @@ import { FavoriteIconComponent } from './favorite-icon/favorite-icon.component';
 import { TitleCaseComponent } from './title-case/title-case.component';
 import { LikeComponent } from './like/like.component';
 import { ZippyComponent } from './zippy/zippy.component';
+import { CourseFormComponent } from './course-form/course-form.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ZippyComponent } from './zippy/zippy.component';
     TitleCaseComponent,
     TitleCase,
     LikeComponent,
-    ZippyComponent
+    ZippyComponent,
+    CourseFormComponent
   ],
   imports: [
     BrowserModule,

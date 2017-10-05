@@ -1,0 +1,42 @@
+<h2 class="page-header">6. Forms</h2>
+
+<form ngForm #f="ngForm" (ngSubmit)="submit(f)">
+  <div class="form-group">
+    <label for="courseName">Course Name</label>
+    <input
+      ngModel
+      #courseName = "ngModel"
+      name="courseName"
+      id="courseName" 
+      type="text"
+      required
+      minlength="3"
+      class="form-control"
+      >
+      <div class="alert alert-danger" *ngIf="courseName.touched && courseName.errors" >
+        <div *ngIf="courseName.errors.required" >Course Name is Required!</div>
+        <div *ngIf="courseName.errors.minlength">Course Name should contain at least {{courseName.errors.minlength.requiredLength}} Chars</div>
+      </div>
+  </div>
+
+  <div class="select">
+    <label for="category">Category</label>
+    <select class="form-control" ngModel #category name="category" id="category">
+      <option *ngFor="let category of categories" value="{{category.id}}">{{ category.name }}</option>
+    </select>
+  </div>
+
+  <div class="checkbox">
+    <label for="garantee"></label>
+    <input 
+      ngModel
+      name="garantee"
+      #garantee="ngModel"
+      value="true"
+      type="checkbox">30-day money-back gurantee
+  </div>
+
+  <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Submit</button>
+
+  <p>{{f.value | json}}</p>
+</form>
